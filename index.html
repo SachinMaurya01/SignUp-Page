@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h2>Signup Form</h2>
+            <form id="signupForm">
+                <div class="mobile-otp-inputs">
+                    <input type="number" id="phoneNumber" value="phoneNumber" onchange="numberchange(this.value)" name="phoneNumber" placeholder="Mobile Phone Number" required>
+                    <input type="text" name="verificationCode" placeholder="Mobile Message Verification Code" required>
+                    <button type="button" id="verifyOTPBtn">Send OTP</button>
+                </div>
+                <div class="remaining-inputs hidden">
+                    <input type="text" name="username" placeholder="Username" minlength="3" required>
+                    <input type="email" name="email" placeholder="Email" minlength="13" required>
+                    <input type="password" name="password" placeholder="Password" minlength="8" required>
+                    <input type="text" name="firstName" placeholder="First Name" minlength="3" required>
+                    <input type="text" name="lastName" placeholder="Last Name" minlength="3" required>
+                </div>
+                <button type="submit" id="submitBtn" class="hidden">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
